@@ -37,7 +37,7 @@ Now for the real stuff:
 
 ##### Then move the cursor to the first empty line and Paste this:
 <code>@reboot sudo /usr/bin/python3 /root/p4wnsolo-qr.py &&</code>
-##### Just run a quick test to verify p4wnsolo-qr.py is actually in the filepath above (or change the line above).
+##### <u>BEFORE YOU REBOOT</u>:  Just run a quick test to verify p4wnsolo-qr.py is actually in the filepath above (or change the line above).
 
 ### How do I test the crontab entry before I reboot?
 
