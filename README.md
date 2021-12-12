@@ -17,7 +17,7 @@ Now for the real stuff:
 <img src="p4wnsolo-qr-code-ssh-display.jpg">
 
 ## Requirements:
-##### 🔵 Raspberry Pi Zero W / Zero 2 (tested Dec 12, 2021 on RPi 0 W running P4wnP1 ALOA)
+##### 🔵 Raspberry Pi (any model should work - Tested Dec 12 '21 on RPi 0 W running P4wnP1 ALOA)
 ##### 🔵 1.3" OLED Hat (SH1106)
 ##### 🔵 <a href="https://osintool.com/sh1106-oled-screen/">Luma.oled drivers installed</a>
 ##### Install Luma & Luma OLED:
