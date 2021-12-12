@@ -20,7 +20,7 @@ Now for the real stuff:
 ##### 🔵 Raspberry Pi (any model should work - Tested Dec 12 '21 on RPi 0 W running P4wnP1 ALOA)
 ##### 🔵 1.3" OLED Hat (SH1106)
 ##### 🔵 <a href="https://osintool.com/sh1106-oled-screen/">Luma.oled drivers installed</a>
-##### Install Luma & Luma OLED:
+#### How to Install Luma & Luma OLED:
 ##### <a href="https://github.com/pimoroni/sh1106-python"><code>sudo pip3 install luma luma.oled</code></a>
 
 ## 🔨 Usage:
