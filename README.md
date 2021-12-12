@@ -4,7 +4,7 @@
 Note:  The script currently checks the WiFi (Client-mode) IP Address.  I didn't add other IP addresses in yet (such as Ethernet Gadget IP Address, etc) because this is a work-in-progress, and the current version is more of a demo than anything.
 
 * This script package gives your P4wnP1 w/OLED screen the ability to generate and display QR Codes directly on the OLED screen.
-The intented purpose is to run this script when P4wnP1 boot up.
+The intented purpose is to run this script when P4wnP1 boot up (see below for How to Run on Boot instructions).
 
 * This way you can see your P4wnP1's IP address automatically (and scan the QR Code with a phone) after P4wnP1 boots up, without having to do anything else.
 Ideally, this method of displaying (and optionally scanning) would save time in your workflow and make on-the-go operations faster & more plausible.
