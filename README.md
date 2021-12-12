@@ -1,6 +1,6 @@
-# ♟️ p4wnsolo-qr
-🟢 QR Code display for P4wnP1 w/OLED (SSH, VNC, any text / URL)
-
+# ♟️ Display QR Codes on P4wnP1 (<code>p4wnsolo-qr</code>)
+🟢 QR Code display for P4wnP1 w/OLED (SSH, VNC, P4wnP1 WebGUI, any text / URL / exfiltrated data)
+#### Example of P4wnP1 showing QR Code to connect to Raspberry Pi via SSH:
 <img src="p4wnsolo-qr-code-ssh-display.jpg">
 
 ## Requirements:
