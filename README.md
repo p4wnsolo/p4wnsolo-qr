@@ -36,17 +36,17 @@ In the works:
   
 ## 📷 Screenshots
   
-####Generating QR Code for SSH
+#### Generating QR Code for SSH
 <img src="p4wnsolo-qr-code-ssh-generating.jpg">
   
-####Displaying QR Code for SSH
+#### Displaying QR Code for SSH
 <img src="p4wnsolo-qr-code-ssh-display.jpg">
   
-####Generating QR Code for Spiderfoot
+#### Generating QR Code for Spiderfoot
 <img src="p4wnsolo-qr-code-spiderfoot-generating.jpg">
      
-####Displaying QR Code for Spiderfoot
+#### Displaying QR Code for Spiderfoot
 <img src="p4wnsolo-qr-code-spiderfoot-display-notime.jpg">
   
-####After Pressing + Button for More Time
+#### After Pressing + Button for More Time
 <img src="p4wnsolo-qr-code-spiderfoot-display.jpg">  
