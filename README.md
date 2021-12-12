@@ -34,20 +34,25 @@ Now for the real stuff:
 ## 🚀 Optional:  Start on Boot
 ##### First, we run this command to open the crontab edit screen:
 ##### <code>crontab -e</code>
+
 ##### Then move the cursor to the first empty line and Paste this:
 <code>@reboot sudo /usr/bin/python3 /root/p4wnsolo-qr.py &&</code>
 ##### Just run a quick test to verify p4wnsolo-qr.py is actually in the filepath above (or change the line above).
-#### How do I test the crontab entry before I reboot?
+
+### How do I test the crontab entry before I reboot?
+
 ##### Test the crontab entry by running the command above (without the "@reboot" part or "&&" part) in the Command Line before rebooting.  Ex:
 <code>sudo /usr/bin/python3 /path/to/file/p4wnsolo-qr.py</code>
+##### If running the command above launches the script successfully, then you can use that same command in crontab (with "@reboot" before and "&&" after)!
+
 ##### Note:  If your OLED screen is already displaying something using Python, you'll have to kill that script before running P4wnSolo-QR so they don't fight for screen access:
 <code>pkill -f "yourScriptNameHere.py"</code>
   
-### 📷 Sample QR Code:
+## 📷 Sample QR Code:
 <img src="qr.png">
 See the images in this Repo (<code>p4wnsolo-qr-code-XYZ.jpg</code>) or scroll down for example display screens.
 
-#### 🕷Extra:
+### 🕷Extra:
 The default operating mode is <code>ssh</code>, which generates a QR Code to connect to Raspberry Pi via SSH.
 There's also a <code>spiderfoot</code> option, which generates a QR Code to connect to Spiderfoot server running on Raspberry Pi.
 The Spiderfoot feature has not yet been implemented (doesn't check to see if Spiderfoot is running).
@@ -57,7 +62,7 @@ But if you want to see the "demo" of Spiderfoot QR Code mode, here's how:
 3.  Comment out the line that says <code>themode = 'ssh'</code>
 4.  Uncomment the line that says <code>themode = 'spiderfoot'</code>
 In the works:
-- Add <code>themode<code> code entries for P4wnP1 WebGUI URL
+- Add <code>themode</code> code entries for P4wnP1 WebGUI URL
   
 ## 📷 Screenshots
   
@@ -78,7 +83,7 @@ In the works:
 
   
 ## File Requirements
-  #####These Files Must Be in the Same Folder as <code>p4wnsolo-qr.py</code>:
+  ##### These Files Must Be in the Same Folder as <code>p4wnsolo-qr.py</code>:
   * DroidSansMono.ttf - Font for small text on OLED screens
   * Prototype.ttf - Font for "Generating QR Code" screen
   * SH1106.py - Library for displaying things on SH1106 OLED screen
