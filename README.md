@@ -1,5 +1,5 @@
 # ♟️ Display QR Codes on P4wnP1 (<code>p4wnsolo-qr</code>)
-🟢 QR Code display for P4wnP1 w/OLED (SSH, VNC, P4wnP1 WebGUI, any text / URL / exfiltrated data)
+🟢 QR Code display for P4wnP1 w/<a href="https://www.waveshare.com/1.3inch-oled-hat.htm">OLED</a> (SSH, VNC, P4wnP1 WebGUI, any text / URL / exfiltrated data)
 
 Note:  The script currently checks the WiFi (Client-mode) IP Address.  I didn't add other IP addresses in yet (such as Ethernet Gadget IP Address, etc) because this is a work-in-progress, and the current version is more of a demo than anything.
 
@@ -17,8 +17,8 @@ Now for the real stuff:
 <img src="p4wnsolo-qr-code-ssh-display.jpg">
 
 ## Requirements:
-##### 🔵 Raspberry Pi (any model should work - Tested Dec 12 '21 on RPi 0 W running P4wnP1 ALOA)
-##### 🔵 1.3" OLED Hat (SH1106)
+##### 🔵 Raspberry Pi (any model should work - Tested Dec 12 '21 on RPi 0 W running <a href ="https://github.com/RoganDawes/P4wnP1_aloa">P4wnP1 ALOA)</a>
+##### 🔵 <a href="https://www.waveshare.com/1.3inch-oled-hat.htm">1.3" OLED Hat (SH1106)</a>
 ##### 🔵 <a href="https://osintool.com/sh1106-oled-screen/">Luma.oled drivers installed</a>
 #### How to Install Luma & Luma OLED:
 ##### <a href="https://github.com/pimoroni/sh1106-python"><code>sudo pip3 install luma luma.oled</code></a>
