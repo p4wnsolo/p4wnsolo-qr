@@ -77,6 +77,18 @@ In the works:
 <img src="p4wnsolo-qr-code-spiderfoot-display.jpg">  
 
   
+## File Requirements
+  #####These Files Must Be in the Same Folder as <code>p4wnsolo-qr.py</code>:
+  * DroidSansMono.ttf - Font for small text on OLED screens
+  * Prototype.ttf - Font for "Generating QR Code" screen
+  * SH1106.py - Library for displaying things on SH1106 OLED screen
+  * SH1106.pyc - Config file for ^
+  * config.py - Config file
+  * config.pyc - Config file
+  * demo_opts.py - Config file
+  
+  
+  
   
 Thanks to
   BeBoX
