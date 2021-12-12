@@ -35,13 +35,13 @@ Now for the real stuff:
 ##### First, we run this command to open the crontab edit screen:
 ##### <code>crontab -e</code>
 ##### Then move the cursor to the first empty line and Paste this:
-##### <code>@reboot sudo /usr/bin/python3 /root/p4wnsolo-qr.py &&
+<code>@reboot sudo /usr/bin/python3 /root/p4wnsolo-qr.py &&</code>
 ##### Just run a quick test to verify p4wnsolo-qr.py is actually in the filepath above (or change the line above).
 #### How do I test the crontab entry before I reboot?
 ##### Test the crontab entry by running the command above (without the "@reboot" part or "&&" part) in the Command Line before rebooting.  Ex:
-##### <code>sudo /usr/bin/python3 /path/to/file/p4wnsolo-qr.py</code>
+<code>sudo /usr/bin/python3 /path/to/file/p4wnsolo-qr.py</code>
 ##### Note:  If your OLED screen is already displaying something using Python, you'll have to kill that script before running P4wnSolo-QR so they don't fight for screen access:
-##### <code>pkill -f "yourScriptNameHere.py"</code>
+<code>pkill -f "yourScriptNameHere.py"</code>
   
 ### 📷 Sample QR Code:
 <img src="qr.png">
