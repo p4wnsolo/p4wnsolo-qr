@@ -1,5 +1,5 @@
 # ♟️ Display QR Codes on P4wnP1 (<code>p4wnsolo-qr</code>)
-🟢 QR Code display for P4wnP1 w/<a href="https://www.waveshare.com/1.3inch-oled-hat.htm">OLED</a> (SSH, VNC, P4wnP1 WebGUI, any text / URL / exfiltrated data)
+🟢 QR Code display for P4wnP1 w/[OLED screen](https://www.waveshare.com/1.3inch-oled-hat.htm) (SSH, VNC, P4wnP1 WebGUI, any text / URL / exfiltrated data)
 
 Note:  The script currently checks the WiFi (Client-mode) IP Address.  I didn't add other IP addresses in yet (such as Ethernet Gadget IP Address, etc) because this is a work-in-progress, and the current version is more of a demo than anything.
 
@@ -14,76 +14,106 @@ Ideally, this method of displaying (and optionally scanning) would save time in 
 Now for the real stuff:
 
 #### Example of P4wnP1 showing QR Code to connect to Raspberry Pi via SSH:
-<img src="p4wnsolo-qr-code-ssh-display.jpg">
+![p4wnsolo-qr](p4wnsolo-qr-code-ssh-display.jpg)
 
 ## Requirements:
-##### 🔵 Raspberry Pi (any model should work - Tested Dec 12 '21 on RPi 0 W running <a href ="https://github.com/RoganDawes/P4wnP1_aloa">P4wnP1 ALOA)</a>
-##### 🔵 <a href="https://www.waveshare.com/1.3inch-oled-hat.htm">1.3" OLED Hat (SH1106)</a>
-##### 🔵 <a href="https://osintool.com/sh1106-oled-screen/">Luma.oled drivers installed</a>
-#### How to Install Luma & Luma OLED:
-##### <a href="https://github.com/pimoroni/sh1106-python"><code>sudo pip3 install luma luma.oled</code></a>
+
+🔵 Raspberry Pi (any model should work - Tested Dec 12 '21 on RPi 0 W running [P4wnP1 ALOA](https://github.com/RoganDawes/P4wnP1_aloa)
+
+🔵 [1.3" OLED Hat (SH1106)](https://www.waveshare.com/1.3inch-oled-hat.htm) 
+
+🔵 [Luma.oled drivers installed](https://osintool.com/sh1106-oled-screen)
+
+#### How to [Install Luma & Luma OLED](https://github.com/pimoroni/sh1106-python)
+
+`sudo pip3 install luma luma.oled`
 
 ## 🔨 Usage:
+
 ##### Clone the repo
-<code>git clone https://github.com/p4wnsolo/p4wnsolo-qr.git</code>
+
+`git clone https://github.com/p4wnsolo/p4wnsolo-qr.git`
+
 ##### Change directories
-<code>cd p4wnsolo-qr</code>
+
+`cd p4wnsolo-qr`
+
 ##### Launch the script
-<code>python3 p4wnsolo-qr.py -i spi --display sh1106</code>
+
+`python3 p4wnsolo-qr.py -i spi --display sh1106`
 
 ## 🚀 Optional:  Start on Boot
+
 ##### First, we run this command to open the crontab edit screen:
-##### <code>crontab -e</code>
+
+`crontab -e`
 
 ##### Then move the cursor to the first empty line and Paste this:
-<code>@reboot sudo /usr/bin/python3 /root/p4wnsolo-qr.py &&</code>
-##### <u>BEFORE YOU REBOOT</u>:  Just run a quick test to verify p4wnsolo-qr.py is actually in the filepath above (or change the line above).
+
+`@reboot sudo /usr/bin/python3 /root/p4wnsolo-qr.py &&`
+
+##### *BEFORE YOU REBOOT*:  Just run a quick test to verify p4wnsolo-qr.py is actually in the filepath above (or change the line above).
 
 ### How do I test the crontab entry before I reboot?
 
 ##### Test the crontab entry by running the command above (without the "@reboot" part or "&&" part) in the Command Line before rebooting.  Ex:
-<code>sudo /usr/bin/python3 /path/to/file/p4wnsolo-qr.py</code>
+
+`sudo /usr/bin/python3 /path/to/file/p4wnsolo-qr.py`
+
 ##### If running the command above launches the script successfully, then you can use that same command in crontab (with "@reboot" before and "&&" after)!
 
 ##### Note:  If your OLED screen is already displaying something using Python, you'll have to kill that script before running P4wnSolo-QR so they don't fight for screen access:
-<code>pkill -f "yourScriptNameHere.py"</code>
-  
+
+`pkill -f "yourScriptNameHere.py"`
+
 ## 📷 Sample QR Code:
-<img src="qr.png">
+
+[Sample QR Code](qr.png)
+
 See the images in this Repo (<code>p4wnsolo-qr-code-XYZ.jpg</code>) or scroll down for example display screens.
 
 ### 🕷Extra:
+
 The default operating mode is <code>ssh</code>, which generates a QR Code to connect to Raspberry Pi via SSH.
+
 There's also a <code>spiderfoot</code> option, which generates a QR Code to connect to Spiderfoot server running on Raspberry Pi.
+
 The Spiderfoot feature has not yet been implemented (doesn't check to see if Spiderfoot is running).
+
 But if you want to see the "demo" of Spiderfoot QR Code mode, here's how:
+
 1.  Open <code>p4wnsolo-qr.py</code> in text editor
+
 2.  Near Line 25, you'll see something like this:  <code>##### Set mode here</code>
+
 3.  Comment out the line that says <code>themode = 'ssh'</code>
+
 4.  Uncomment the line that says <code>themode = 'spiderfoot'</code>
+
 In the works:
-- Add <code>themode</code> code entries for P4wnP1 WebGUI URL
+
+- Add `themode` code entries for P4wnP1 WebGUI URL
   
 ## 📷 Screenshots
   
 ### Generating QR Code for SSH
-<img src="p4wnsolo-qr-code-ssh-generating.jpg">
-  
+![Generating QR Code](p4wnsolo-qr-code-ssh-generating.jpg)
+ 
 ### Displaying QR Code for SSH
-<img src="p4wnsolo-qr-code-ssh-display.jpg">
+![Displaying QR Code for SSH](p4wnsolo-qr-code-ssh-display.jpg)
   
 ### Generating QR Code for Spiderfoot
-<img src="p4wnsolo-qr-code-spiderfoot-generating.jpg">
-     
+![Generating QR Code for Spiderfoot](p4wnsolo-qr-code-spiderfoot-generating.jpg)
+
 ### Displaying QR Code for Spiderfoot
-<img src="p4wnsolo-qr-code-spiderfoot-display-notime.jpg">
+![Displaying QR Code for Spiderfoot](p4wnsolo-qr-code-spiderfoot-display-notime.jpg)
   
 ### After Pressing + Button for More Time
-<img src="p4wnsolo-qr-code-spiderfoot-display.jpg">  
+![After Pressing + Button for More Time](p4wnsolo-qr-code-spiderfoot-display.jpg)
 
   
 ## File Requirements
-  ##### These Files Must Be in the Same Folder as <code>p4wnsolo-qr.py</code>:
+  ##### These Files Must Be in the Same Folder as `p4wnsolo-qr.py`:
   * DroidSansMono.ttf - Font for small text on OLED screens
   * Prototype.ttf - Font for "Generating QR Code" screen
   * SH1106.py - Library for displaying things on SH1106 OLED screen
