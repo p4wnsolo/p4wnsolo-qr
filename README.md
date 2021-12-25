@@ -1,4 +1,4 @@
-# ♟️ Display QR Codes on P4wnP1 (<code>p4wnsolo-qr</code>)
+# ♟️ Display QR Codes on P4wnP1 (`p4wnsolo-qr`)
 🟢 QR Code display for P4wnP1 w/[OLED screen](https://www.waveshare.com/1.3inch-oled-hat.htm) (SSH, VNC, P4wnP1 WebGUI, any text / URL / exfiltrated data)
 
 Note:  The script currently checks the WiFi (Client-mode) IP Address.  I didn't add other IP addresses in yet (such as Ethernet Gadget IP Address, etc) because this is a work-in-progress, and the current version is more of a demo than anything.
@@ -30,25 +30,25 @@ Now for the real stuff:
 
 ## 🔨 Usage:
 
-##### Clone the repo
+Clone the repo
 
 `git clone https://github.com/p4wnsolo/p4wnsolo-qr.git`
 
-##### Change directories
+Change directories
 
 `cd p4wnsolo-qr`
 
-##### Launch the script
+Launch the script
 
 `python3 p4wnsolo-qr.py -i spi --display sh1106`
 
 ## 🚀 Optional:  Start on Boot
 
-##### First, we run this command to open the crontab edit screen:
+First, we run this command to open the crontab edit screen:
 
 `crontab -e`
 
-##### Then move the cursor to the first empty line and Paste this:
+Then move the cursor to the first empty line and Paste this:
 
 `@reboot sudo /usr/bin/python3 /root/p4wnsolo-qr.py &&`
 
@@ -56,13 +56,13 @@ Now for the real stuff:
 
 ### How do I test the crontab entry before I reboot?
 
-##### Test the crontab entry by running the command above (without the "@reboot" part or "&&" part) in the Command Line before rebooting.  Ex:
+Test the crontab entry by running the command above (without the "@reboot" part or "&&" part) in the Command Line before rebooting.  Ex:
 
 `sudo /usr/bin/python3 /path/to/file/p4wnsolo-qr.py`
 
-##### If running the command above launches the script successfully, then you can use that same command in crontab (with "@reboot" before and "&&" after)!
+If running the command above launches the script successfully, then you can use that same command in crontab (with "@reboot" before and "&&" after)!
 
-##### Note:  If your OLED screen is already displaying something using Python, you'll have to kill that script before running P4wnSolo-QR so they don't fight for screen access:
+Note:  If your OLED screen is already displaying something using Python, you'll have to kill that script before running P4wnSolo-QR so they don't fight for screen access:
 
 `pkill -f "yourScriptNameHere.py"`
 
@@ -70,25 +70,25 @@ Now for the real stuff:
 
 [Sample QR Code](qr.png)
 
-See the images in this Repo (<code>p4wnsolo-qr-code-XYZ.jpg</code>) or scroll down for example display screens.
+See the images in this Repo (`p4wnsolo-qr-code-XYZ.jpg`) or scroll down for example display screens.
 
 ### 🕷Extra:
 
-The default operating mode is <code>ssh</code>, which generates a QR Code to connect to Raspberry Pi via SSH.
+The default operating mode is `ssh`, which generates a QR Code to connect to Raspberry Pi via SSH.
 
-There's also a <code>spiderfoot</code> option, which generates a QR Code to connect to Spiderfoot server running on Raspberry Pi.
+There's also a `spiderfoot` option, which generates a QR Code to connect to Spiderfoot server running on Raspberry Pi.
 
 The Spiderfoot feature has not yet been implemented (doesn't check to see if Spiderfoot is running).
 
 But if you want to see the "demo" of Spiderfoot QR Code mode, here's how:
 
-1.  Open <code>p4wnsolo-qr.py</code> in text editor
+1.  Open `p4wnsolo-qr.py` in text editor
 
-2.  Near Line 25, you'll see something like this:  <code>##### Set mode here</code>
+2.  Near Line 25, you'll see something like this:  `##### Set mode here`
 
-3.  Comment out the line that says <code>themode = 'ssh'</code>
+3.  Comment out the line that says `themode = 'ssh'`
 
-4.  Uncomment the line that says <code>themode = 'spiderfoot'</code>
+4.  Uncomment the line that says `themode = 'spiderfoot'`
 
 In the works:
 
