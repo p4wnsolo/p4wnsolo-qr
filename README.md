@@ -68,7 +68,7 @@ Note:  If your OLED screen is already displaying something using Python, you'll 
 
 ## 📷 Sample QR Code:
 
-[Sample QR Code](qr.png)
+![Sample QR Code](qr.png)
 
 See the images in this Repo (`p4wnsolo-qr-code-XYZ.jpg`) or scroll down for example display screens.
 
